@@ -34,11 +34,12 @@ FuriHalSpiBus furi_hal_spi_bus_external = {
 
 FuriHalSpiBus furi_hal_spi_bus_subghz = {
 #if BOARD_CC1101_SPI_SHARED
-    /* T-Embed: CC1101 shares SPI2_HOST with LCD+SD, CS-muxed */
     .host_id = SPI2_HOST,
     .bitbang = false,
+#elif defined(BOARD_CC1101_SPI_HOST)
+    .host_id = BOARD_CC1101_SPI_HOST,
+    .bitbang = false,
 #else
-    /* Waveshare: CC1101 on separate bitbang SPI */
     .host_id = -1,
     .bitbang = true,
 #endif
