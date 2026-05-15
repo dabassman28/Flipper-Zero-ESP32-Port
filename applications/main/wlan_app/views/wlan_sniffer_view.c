@@ -104,7 +104,7 @@ static bool wlan_sniffer_view_input(InputEvent* event, void* context) {
     case InputKeyOk:
         v->action_cb(WlanSnifferViewActionToggle, v->action_ctx);
         return true;
-    case InputKeyDown:
+   case InputKeyDown:
     case InputKeyRight:
         v->action_cb(
             channel_mode ? WlanSnifferViewActionChannelDown : WlanSnifferViewActionToggle,
