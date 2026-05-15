@@ -1,7 +1,8 @@
 App(
     appid="other_os",
     name="Bruce",
-    apptype=FlipperAppType.APP,
+ // apptype=FlipperAppType.APP,
+    apptype=FlipperAppType.EXTSETTINGS,
     entry_point="other_os_app",
     requires=[
         "gui",
