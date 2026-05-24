@@ -8,3 +8,70 @@ I will keep the repo sycned weekly and working/ up to date.
 I take no resposnibilty for your use of this port or any action or consequence resulting from your use of the code. Follow the law. 
 
 
+
+## Buttons
+| Signal      | GPIO |
+|-------------|------|
+| Up          | 41   |
+| Down        | 40   |
+| Left        | 38   |
+| Right       | 39   |
+| OK / Boot   | 0    |
+| Back        | 4    |
+| Battery ADC | 2    | use with dual 100kohm resistors to ground and battery positive, pin goes in the middle
+
+## ILI9341
+| Signal | GPIO | Notes                  |
+|--------|------|------------------------|
+| MOSI   | 17   |                        |
+| SCLK   | 18   |                        |
+| DC     | 15   |                        |
+| CS     | 7    |                        |
+| RST    | 16   |                        |
+| BL     | 6    | Active-high            |
+| —      | —    | BGR order, swap XY     |
+| —      | —    | FG 0xA0FD / BG 0x0000  |
+
+## SD Card 
+| Signal | GPIO |
+|--------|------|
+| CS     | 3    |
+| MISO   | 8    |
+| MOSI   | 17   |
+| SCLK   | 18   |
+
+## CC1101 SubGHz (SPI3_HOST)
+| Signal | GPIO |
+|--------|------|
+| SCK    | 13   |
+| CSN    | 46   |
+| MISO   | 11   |
+| MOSI   | 12   |
+| GDO0   | 9    |
+| GDO2   | 10   |
+
+## NRF24L01 (shared SPI bus with CC1101)
+| Signal | GPIO |
+|--------|------|
+| SCK    | 13   |
+| MISO   | 11   |
+| MOSI   | 12   |
+| CSN    | 14   |
+| CE     | 21   |
+
+## PN532 NFC (I2C_NUM_0)
+| Signal | GPIO |
+|--------|------|
+| SCL    | 42   |
+| SDA    | 47   |
+
+
+## IR
+| Signal | GPIO |
+|--------|------|
+| TX     | 5    |
+
+## WS2812 RGB LED
+| Signal | GPIO | Notes  |
+|--------|------|--------|
+| Data   | 48   | 1 LED  |
